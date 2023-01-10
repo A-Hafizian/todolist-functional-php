@@ -1,0 +1,12 @@
+{
+    "name": "ali/todolist",
+    "description": "todolist project with php,ajax",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ali\\Todolist\\": "src/"
+        }
+    },
+    "require": {}
+}

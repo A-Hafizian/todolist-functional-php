@@ -1,0 +1,113 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Calibri;
+    background-color: #3b3b3b;
+    color: white;
+}
+.container{
+    /*border: 1px solid red;*/
+    width: 60%;
+    margin: 0 auto;
+}
+#top-header{
+    background-color: #1800ad;
+    /*height: 100px;*/
+    color: white;
+    padding: 10px 0 ;
+}
+#top-header h3,#top-header h5{
+    margin: 0;
+}
+
+#top-nav{
+    background-color: #171717;
+    padding: 5px 0;
+    color: white;
+    margin-bottom: 50px;
+}
+#search-box{
+    padding: 5px;
+}
+
+ul#tasks-list{
+    /*border: 1px solid red;*/
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+ul#tasks-list li{
+    border: 1px solid gray;
+    background-color: black;
+    padding: 8px;
+    position: relative;
+    margin-bottom: 5px;
+}
+ul#tasks-list li .remove{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    text-decoration: none;
+    color: gray;
+}
+#new-task-form #new-task{
+    padding: 5px;
+}
+#new-task-form input[type="submit"]{
+    background-color: #1800ad;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    padding: 7px 20px;
+}
+#nav-left{
+    width: 255px;
+    border-radius: 10px;
+    background-color: #1700ad57;
+    padding-bottom: 20px;
+    float: left;
+}
+#nav-left header#nav-header{
+    background-color: #1800ad;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    font-weight: bold;
+    
+}
+#nav-left ul{
+    padding: 0;
+}
+#nav-left ul li{
+    list-style-type: none;
+    line-height: 2;
+    padding-left: 10px;
+    transition: background-color 0.5s;
+}
+#nav-left ul li a{
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+}
+#nav-left ul li a:link , #nav-left ul li a:visited{
+    color: white;
+    font-size: 16px;
+}
+#nav-left ul li:hover{
+    background-color: rgb(131, 131, 131);
+}
+#nav-left input#newFolderInput{
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid black;
+    outline:0 ;
+}
+#nav-left button#newFolderBtn{
+    padding: 8px;
+    background-color: #1800ad;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
