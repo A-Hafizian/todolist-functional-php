@@ -1,3 +1,17 @@
+
+@font-face {
+    font-family: 'fontawsome';
+    src: url('../font/font-awsome/fa-solid-900.eot?#'),
+    url('../font/font-awsome/fa-solid-900.woff') format('woff'),
+    url('../font/font-awsome/fa-solid-900.ttf') format('truetype')
+}
+.fa,
+.fas {
+    font-family: 'fontawsome';
+    font-weight: 900;
+}
+
+
 body{
     padding: 0;
     margin: 0;
@@ -83,19 +97,25 @@ ul#tasks-list li .remove{
     line-height: 2;
     padding-left: 10px;
     transition: background-color 0.5s;
+    position: relative;
+
 }
 #nav-left ul li a{
     color: white;
     text-decoration: none;
     width: 100%;
-    display: block;
 }
-#nav-left ul li a:link , #nav-left ul li a:visited{
+#nav-left ul li a:link{
     color: white;
     font-size: 16px;
 }
+#nav-left ul li a .close{
+    position: absolute;
+    top: 2px;
+    right: 30px;
+}
 #nav-left ul li:hover{
-    background-color: rgb(131, 131, 131);
+    background-color: #1800ad;
 }
 #nav-left input#newFolderInput{
     padding: 8px;

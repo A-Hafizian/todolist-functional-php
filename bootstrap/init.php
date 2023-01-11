@@ -1,14 +1,14 @@
-<?php
+<?php defined('SITE_TITLE') OR die('premision denied');
 
-    include 'constanst.php';
-    include BASE_PATH.'bootstrap/config.php';
-    include BASE_PATH.'lib/helpser.php';
+include 'constanst.php';
+include BASE_PATH.'bootstrap/config.php';
+include BASE_PATH.'lib/helpser.php';
+try {
+    $pdo = new PDO("mysql:host = $config_database->host;dbname=$config_database->db",$config_database->user,$config_database->pass);
+} catch (PDOException $e) {
+    dieMassage('connect faild '.$e->getMessage()) ;
+   // echo 'connect faild '.$e->getMessage();
+}
 
-    try {
-        $pdo = new PDO("mysql:dbname = {$config_database -> host};host={$config_database->host};",$config_database->user,$config_database->pass);
-    } catch (PDOException $e) {
-        dieMassage('connect faild '.$e->getMessage()) ;
-        die();
-    }
-
-    include BASE_PATH.'vendor/autoload.php';
+include BASE_PATH.'vendor/autoload.php';
+include BASE_PATH.'lib/lib-tasks.php';
