@@ -1,21 +1,6 @@
 $(function () {
     let number = 0;
-    $('#new-task-form').submit(function () {
-
-        let value = $('#new-task').val();
-
-        if (value != null && value != '') {
-
-            number++;
-
-            $('<li class="animate__animated animate__flipInX"><input type="checkbox" id="task_' + number + '"><label for="task_' + number + '">' + value + '</label><a href="#" class="remove">Remove</a></li>')
-                .appendTo('#tasks-list')
-
-            $('#new-task').val('');
-        }
-
-        return false;
-    })
+    
 
     $('body').on('change', ':checkbox[id^="task_"]', function () {
         countRemainTasks();
@@ -36,7 +21,6 @@ $(function () {
 
     $('#search-box').on('input',function(){
         let value = $(this).val();
-        console.log(value);
 
         if (value!='' && value!=null) {
             $('#tasks-list li').hide();
@@ -49,9 +33,9 @@ $(function () {
 
     })
 
-    $('body').on('click','.remove',function () {
-        $(this).closest('li').remove();
-    })
+   /*  $('body').on('click','a.remove',function () {
+        //$(this).closest('li').remove();
+    }) */
 });
 
 function countRemainTasks() {

@@ -1,4 +1,9 @@
-<?php defined('SITE_TITLE') OR die('premision denied');
+<?php 
+
+function site_url($uri =null)
+{
+    return BASE_URL.$uri;
+}
 
 function isAjaxResquest()
 {

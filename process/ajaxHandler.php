@@ -1,4 +1,4 @@
-<?php  defined('SITE_TITLE') OR die('premision denied');
+<?php  
 
 
 include '../bootstrap/init.php';
@@ -13,7 +13,10 @@ if (empty($_POST['action'])||!isset($_POST['action'])) {
          echo json_encode(addFolder($_POST['folderName'])) ;
         
         break;
-    
+    case 'addTask':
+        //echo json_encode(addFolder($_POST['folderName'])) ;
+        echo addTask($_POST['title'], $_POST['folderID']);
+        break;
     default:
         # code...
         break;

@@ -1,4 +1,4 @@
-<?php defined('SITE_TITLE') OR die('premision denied');
+<?php 
 
 include 'constanst.php';
 include BASE_PATH.'bootstrap/config.php';
@@ -12,3 +12,4 @@ try {
 
 include BASE_PATH.'vendor/autoload.php';
 include BASE_PATH.'lib/lib-tasks.php';
+include BASE_PATH.'lib/lib-auth.php';

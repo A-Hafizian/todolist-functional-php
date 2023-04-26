@@ -64,10 +64,10 @@ ul#tasks-list li .remove{
     text-decoration: none;
     color: gray;
 }
-#new-task-form #new-task{
+#new-task , #newFolderInput{
     padding: 5px;
 }
-#new-task-form input[type="submit"]{
+#add-task{
     background-color: #1800ad;
     color: white;
     border: 0;
@@ -75,14 +75,21 @@ ul#tasks-list li .remove{
     padding: 7px 20px;
 }
 #nav-left{
+    margin-left: 15px;
+    
     width: 255px;
     border-radius: 10px;
-    background-color: #1700ad57;
-    padding-bottom: 20px;
+    
+    background-color: transparent;
+    
     float: left;
 }
+#nav-left div{
+    padding: 0 10px;
+    
+}
 #nav-left header#nav-header{
-    background-color: #1800ad;
+    background-color: #171717;
     padding: 10px;
     text-align: center;
     border-radius: 10px 10px 0 0;
@@ -111,18 +118,13 @@ ul#tasks-list li .remove{
 }
 #nav-left ul li a .close{
     position: absolute;
-    top: 2px;
-    right: 30px;
+    top: 9px;
+    right: 8px;
 }
 #nav-left ul li:hover{
-    background-color: #1800ad;
+    background-color:#272626;
 }
-#nav-left input#newFolderInput{
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid black;
-    outline:0 ;
-}
+
 #nav-left button#newFolderBtn{
     padding: 8px;
     background-color: #1800ad;
@@ -130,4 +132,10 @@ ul#tasks-list li .remove{
     border: 0;
     border-radius: 5px;
     cursor: pointer;
+}
+.active{
+    color:#ff3a3a;
+}
+#holder-folder li{
+    border-bottom: 1px solid white;
 }

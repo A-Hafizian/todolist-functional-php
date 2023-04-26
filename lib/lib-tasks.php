@@ -1,7 +1,44 @@
-<?php defined('SITE_TITLE') OR die('premision denied');
+<?php 
 function getCourrentUserID()
 {
     return 1;
+}
+
+function addTask($title, $folder_id)
+{
+    $courrntUserID = getCourrentUserID();
+    global $pdo;
+    $query = "INSERT INTO `task` ( `title`, `user_id`,`folder_id`) VALUES (:title, :user_id, :folder_id);";
+    $stmt = $pdo ->prepare($query);
+    $stmt->execute([':title'=>$title,':user_id'=>$courrntUserID, ':folder_id'=>$folder_id]);
+    $row = $stmt->rowCount();
+   
+   return($row);
+}
+function removeTask($taskID)
+{
+    global $pdo;
+    $sql = "delete from task where task_id = :id_task;";
+    $stmt = $pdo ->prepare($sql);
+    $stmt ->execute([':id_task' => $taskID]);
+}
+
+
+function getTasks()
+{
+    
+    $sql_folder = null;
+    if (isset($_GET['folder_id']) && is_numeric($_GET['folder_id'])) {
+        $sql_folder = "and folder_id =". $_GET['folder_id'];
+    }
+    $courrntUserID = getCourrentUserID();
+    global $pdo;
+    $query = "SELECT * FROM task where user_id = $courrntUserID $sql_folder;";
+    $stmt = $pdo ->prepare($query);
+    $stmt->execute();
+    $record = $stmt->fetchAll(PDO::FETCH_OBJ);
+    return $record;
+    
 }
 
 function addFolder($folderName)
